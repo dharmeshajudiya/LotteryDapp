@@ -49,6 +49,7 @@ contract Lottery {
         players = new address payable[](0);
     }
 
+    // List all current player who participant in this game
     function allPlayer() public view returns(address payable[] memory) {
          require(msg.sender == manager, "Only manager can access this functionality.");
          return players;
